@@ -29,6 +29,10 @@ body {
     color: #000008;
 }
 
+body.is-loading {
+    overflow: hidden;
+}
+
 .l-inner {
     width: 100%;
     max-width: 960px;
@@ -178,4 +182,55 @@ tr + tr .c-table__col {
     font-size: 22px;
 
     fill: currentColor;
+}
+
+@keyframes blink {
+    0% {
+        opacity: .2;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .2;
+    }
+}
+
+.c-loader {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: none;
+
+    font-size: 26px;
+
+    color: #fff;
+    background-color: rgba(0, 0, 8, .8);
+
+    justify-content: center;
+    align-items: center;
+}
+
+.is-loading .c-loader {
+    display: flex;
+}
+
+.c-loader span {
+    animation-name: blink;
+    animation-duration: 1.4s;
+    animation-iteration-count: infinite;
+
+    animation-fill-mode: both;
+}
+
+.c-loader span:nth-child(2) {
+    animation-delay: .2s;
+}
+
+.c-loader span:nth-child(3) {
+    animation-delay: .4s;
 }
