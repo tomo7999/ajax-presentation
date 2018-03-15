@@ -1,52 +1,131 @@
 <!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="manifest" href="site.webmanifest">
-        <link rel="apple-touch-icon" href="icon.png">
-        <!-- Place favicon.ico in the root directory -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="stylesheet" href="css/main.css">
-    </head>
-    <body>
-        <main>
-            <section>
-                <form id="add-user-form">
-                    <label for="name">Name</label>
-                    <input id="name" name="name" />
-                    <label for="age">Age</label>
-                    <input id="age" name="age" type="number" />
-                    <button type="submit">Add user</button>
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <main>
+        <div class="l-inner">
+            <section class="l-section">
+                <h1 class="c-title">
+                    AJAX workshop
+                </h1>
+            </section>
+            <section class="l-section">
+                <form class="f-form" id="add-user-form">
+                    <div class="f-field">
+                        <label class="f-field__label" for="name">
+                            Name
+                        </label>
+                        <input class="f-field__control" id="name" name="name" />
+                    </div>
+                    <div class="f-field">
+                        <label class="f-field__label" for="age">
+                            Age
+                        </label>
+                        <input class="f-field__control" id="age" name="age" type="number" />
+                    </div>
+                    <button class="f-form__btn" type="submit">
+                        Add user
+                    </button>
                 </form>
             </section>
-            <section>
-                <table>
-                    <thead>
-                        <th>
-                            <td>
+            <section class="l-section">
+                <table class="c-table">
+                    <thead class="c-table__head">
+                        <tr>
+                            <th class="c-table__col">
                                 No.
-                            </td>
-                            <td>
+                            </th>
+                            <th class="c-table__col">
                                 Name
-                            </td>
-                            <td>
+                            </th>
+                            <th class="c-table__col">
                                 Age
-                            </td>
-                        </th>
-                    </thead>
-                    <tbody>
+                            </th>
+                            <th class="c-table__col">
 
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="c-table__body">
+                        <tr>
+                            <td class="c-table__col">
+                                1
+                            </td>
+                            <td class="c-table__col">
+                                Tomasz
+                            </td>
+                            <td class="c-table__col">
+                                23
+                            </td>
+                            <td class="c-table__col">
+                                <a class="c-btn">
+                                   <span class="o-media-wrapper">
+                                        <svg title="Remove" class="o-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 374.145 374.145" style="enable-background:new 0 0 374.145 374.145;" xml:space="preserve">
+                                            <g>
+                                                <circle cx="108.75" cy="67.982" r="60"/>
+                                                <path d="M274.715,167.303c-54.826,0-99.43,44.604-99.43,99.429s44.604,99.43,99.43,99.43s99.43-44.604,99.43-99.43
+                                                    S329.541,167.303,274.715,167.303z M328.809,299.613l-21.213,21.213l-32.881-32.881l-32.881,32.881l-21.213-21.213l32.881-32.881
+                                                    l-32.881-32.881l21.213-21.213l32.881,32.881l32.881-32.881l21.213,21.213l-32.881,32.881L328.809,299.613z"/>
+                                                <path d="M108.75,157.982C48.689,157.982,0,206.671,0,266.732h145.285c0-32.364,11.941-61.991,31.647-84.709
+                                                    C158.281,166.99,134.571,157.982,108.75,157.982z"/>
+                                            </g>
+                                        </svg>
+                                   </span>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="c-table__col">
+                                1
+                            </td>
+                            <td class="c-table__col">
+                                Tomasz
+                            </td>
+                            <td class="c-table__col">
+                                23
+                            </td>
+                            <td class="c-table__col">
+                                <a href="#" class="c-btn">
+                                    <span class="o-media-wrapper">
+                                        <svg title="Remove" class="o-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 374.145 374.145" style="enable-background:new 0 0 374.145 374.145;" xml:space="preserve">
+                                            <g>
+                                                <circle cx="108.75" cy="67.982" r="60"/>
+                                                <path d="M274.715,167.303c-54.826,0-99.43,44.604-99.43,99.429s44.604,99.43,99.43,99.43s99.43-44.604,99.43-99.43
+                                                    S329.541,167.303,274.715,167.303z M328.809,299.613l-21.213,21.213l-32.881-32.881l-32.881,32.881l-21.213-21.213l32.881-32.881
+                                                    l-32.881-32.881l21.213-21.213l32.881,32.881l32.881-32.881l21.213,21.213l-32.881,32.881L328.809,299.613z"/>
+                                                <path d="M108.75,157.982C48.689,157.982,0,206.671,0,266.732h145.285c0-32.364,11.941-61.991,31.647-84.709
+                                                    C158.281,166.99,134.571,157.982,108.75,157.982z"/>
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </section>
-        </main>
-        <script src="js/jquery.js"></script>
-        <script src="js/axios.js"></script>
-        <script src="js/index.js"></script>
-    </body>
+        </div>
+    </main>
+    <script src="js/jquery.js"></script>
+    <script src="js/axios.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
 </html>

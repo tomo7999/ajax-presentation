@@ -1,0 +1,181 @@
+/* Styles */
+
+.color-primary-0 {
+    color: #00005c;
+}	/* Main Primary color */
+.color-primary-1 {
+    color: #01019a;
+}
+.color-primary-2 {
+    color: #00007a;
+}
+.color-primary-3 {
+    color: #000039;
+}
+.color-primary-4 {
+    color: #000008;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 40px;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+
+    color: #000008;
+}
+
+.l-inner {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.l-section + .l-section {
+    margin-top: 40px;
+}
+
+.c-title {
+    margin: 0;
+
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1.12em;
+
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.f-form {
+    display: grid;
+
+    padding: 20px;
+
+    line-height: 1.2em;
+
+    border: 1px solid #ccc;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 30px;
+}
+
+.f-field {
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 48px;
+    grid-row-gap: 6px;
+}
+
+.f-field__label {
+    font-size: 12px;
+
+    text-transform: uppercase;
+}
+
+.f-field__control {
+    width: 100%;
+    height: 48px;
+    padding: 10px;
+
+    font-size: 20px;
+}
+
+.f-form__btn {
+    width: 100%;
+    height: 48px;
+    margin-top: auto;
+
+    font-size: 12px;
+
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+    text-transform: uppercase;
+
+    color: #fff;
+    background-color: #00005c;
+}
+
+.f-form__btn:hover {
+    opacity: .9;
+}
+
+.c-table {
+    width: 100%;
+
+    table-layout: fixed;
+    border-spacing: 0;
+
+    border: 1px solid #ccc;
+}
+
+.c-table__head .c-table__col {
+    height: 48px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    text-transform: uppercase;
+
+    color: #fff;
+    border-bottom: 1px solid #000008;
+    background-color: #000008;
+}
+
+.c-table__col {
+    padding: 16px 32px;
+
+    text-align: left;
+}
+
+tr + tr .c-table__col {
+    border-top: 1px solid #ccc;
+}
+
+.c-table__col:first-child {
+    width: 100px;
+}
+
+.c-table__col:last-child {
+    width: 100px;
+
+    text-align: right;
+}
+
+.c-btn {
+    display: flex;
+
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+
+    color: #000008;
+
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.c-btn:hover {
+    color: #01019a;
+}
+
+.c-btn:hover,
+.c-btn:focus,
+.c-btn:active {
+    text-decoration: none;
+}
+
+.o-icon {
+    display: flex;
+
+    width: 1em;
+    height: 1em;
+
+    font-size: 22px;
+
+    fill: currentColor;
+}
