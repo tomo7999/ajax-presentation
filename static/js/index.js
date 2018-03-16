@@ -72,24 +72,39 @@ jQuery(document).ready(function () {
         return result
       }, {})
 
-    // Clear inputs
-    $addUserForm
-      .find('input')
-      .val('')
-
     // Show loader
     $body.toggleClass('is-loading')
 
+    jQuery('.error-span').remove()
+
     // Send new user data to server
     axios.post('/users', newUserData)
-      .then(function () {
+      .then(function (response) {
         // Hide loader
         $body.toggleClass('is-loading')
+
+        // Clear inputs
+        $addUserForm
+          .find('input')
+          .val('')
 
         // Load users again
         loadUsers()
       })
-      .catch(function () {
+      .catch(function (response) {
+        var errors = response.response.data
+        Object.entries(errors)
+          .forEach(function (keyValue) {
+            var inputName = keyValue[0]
+            var message = keyValue[1]
+
+            jQuery('input[name=' + inputName + ']')
+              .after(jQuery('<span/>', {
+                html: message,
+                'class': 'error-span'
+              }))
+          })
+
         // Hide loader
         $body.toggleClass('is-loading')
       })

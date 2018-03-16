@@ -49,7 +49,7 @@ app.post('/users', function (req, res) {
     if (isNaN(age) || age < 1) {
       res.statusCode = 400
       res.send({
-        error: 'Age is empty or invalid'
+        age: 'Age is empty or invalid'
       })
       return
     }
@@ -58,7 +58,7 @@ app.post('/users', function (req, res) {
     if (!name) {
       res.statusCode = 400
       res.send({
-        error: 'Name is required'
+        name: 'Name is required'
       })
       return
     }
@@ -92,3 +92,5 @@ app.delete('/users/:id', function (req, res) {
 })
 
 app.listen(3000)
+
+console.log(chalk.green('Server running on http://localhost:3000'))
